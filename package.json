@@ -9,6 +9,7 @@
     "config": "~1.10.0",
     "hapi": "^8.8.1",
     "isomorphic-react-boot": "^5.0.1",
+    "jquery": "^3.1.1",
     "node-jsx": "^0.12.4",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
@@ -37,7 +38,6 @@
   },
   "scripts": {
     "test": "standard && tap test/*.js",
-    "start": "node bin/cli",
     "start": "node bin/cli",
     "build-js": "browserify -e --standalone widget-awesome ./lib/browser.js | uglifyjs - > static/bundle.js",
     "build-css": "lessc src/style/widget.less > static/bundle.css",
