@@ -5,7 +5,6 @@ var LikeButton = React.createClass({
   getInitialState: function(){
     return {
         isLiked: false,
-        text: "\u2661",
         likeCount: 0
     };
   },
@@ -14,9 +13,19 @@ var LikeButton = React.createClass({
     if (!this.state.isLiked) {
       this.setState({
         isLiked: true,
-        text:"\u2665",
         likeCount: this.state.likeCount += 1
       });
+      return "heart .liked"
+    } else {
+      return "heart .unliked"
+    }
+  },
+
+  getLikeClass: function() {
+    if (this.state.isLiked) {
+      return 'heart liked';
+    } else {
+      return 'heart unliked';
     }
   },
 
@@ -24,7 +33,7 @@ var LikeButton = React.createClass({
     return (
       <div>
         <button type="button" className="likeButton" onClick={this.likeThis}>
-          <span className="heart">{this.state.text}</span>
+          <div className={this.getLikeClass()}></div>
         </button>
         <div className="likeCount"> Likes: {this.state.likeCount} </div>
       </div>

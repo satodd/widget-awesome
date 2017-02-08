@@ -1,13 +1,19 @@
-
 .Page {
   border: 2px solid black;
-  width: 5em;
-  height: 5em;
+  width: 7em;
+  height: 7em;
   margin: auto;
   border-radius: 5px;
 }
 .heart {
-  font-size: 2em;
+  width: 2.2em;
+  height: 2em;
+  &.liked {
+    background-image: url('images/filledheart.svg');
+  }
+  &.unliked {
+    background-image: url('images/emptyheart.svg');
+  }
 }
 .likeButton {
   width: 6em;
