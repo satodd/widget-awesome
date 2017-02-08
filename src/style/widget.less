@@ -1,28 +1,42 @@
-.Page {
-  border: 2px solid black;
-  width: 7em;
-  height: 7em;
+.buttonContainer {
   margin: auto;
-  border-radius: 5px;
+  top: 50%;
+  border: 2px solid #606060;
+  border-radius: 25px;
+  width: 200px;
+  font-size: 2.5em;
+  color: #606060;
 }
+
 .heart {
-  width: 2.2em;
-  height: 2em;
-  &.liked {
-    background-image: url('images/filledheart.svg');
-  }
+  width: 50px;
+  height: 50px;
+  margin: auto;
   &.unliked {
     background-image: url('images/emptyheart.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+  }
+  &.liked {
+    background-image: url('images/filledheart.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    -webkit-animation: fadein 1s;
+    animation: fadein 1s;
   }
 }
-.likeButton {
-  width: 6em;
-  height: 3.5em;
-  border-radius: 15px;
-  background-color: #dddddd;
-  border: 1px solid #666;
-  margin: 0.5em;
 
+.likeButton {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ededed;
+  border: 1px solid #f2f2f2;
+  margin-left: 60px;
+  margin-top: 27px;
+  box-shadow: 0px 0px 22px rgba(0,0,0,1);
   &:hover {
     background-color: #f4f4f4; 
   }
@@ -31,7 +45,35 @@
     border: 5px solid #666;
   }
 }
+
+.buttonHolder {
+  height: 133px;
+  width: 200px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: #ededed
+}
+
+.countHolder {
+  height: 66px;
+  width: 200px;
+  border-top: 2px solid #606060;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #d8d8d8
+}
+
 .likeCount {
-  margin: .8em;
-  padding-bottom-bottom: 2em;
+  text-align: center;
+  padding-top: 10px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

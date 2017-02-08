@@ -31,11 +31,15 @@ var LikeButton = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <button type="button" className="likeButton" onClick={this.likeThis}>
-          <div className={this.getLikeClass()}></div>
-        </button>
-        <div className="likeCount"> Likes: {this.state.likeCount} </div>
+      <div className="buttonContainer">
+        <div className="buttonHolder">
+          <button type="button" className="likeButton" onClick={this.likeThis}>
+            <div className={this.getLikeClass()}></div>
+          </button>
+        </div>
+        <div className="countHolder">
+          <div className="likeCount"> {this.state.likeCount} likes </div>
+        </div>
       </div>
     )
   }
